@@ -20,10 +20,7 @@ class MMR_pipeline_:
                  device=None,
                  cfg=None):
         # Set Device
-        if device is None:
-            device = torch.device("cpu")
-        else:
-            device = torch.device(device)
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
             
         # register forward hook
         self.teacher_outputs_dict = {}

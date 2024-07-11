@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+# python main.py --cfg method_config/AeBAD_S/MMR.yaml --opts NUM_GPUS 1 RNG_SEED 54 OUTPUT_DIR './log_MMR_AeBAD_S'
+
 import logging
 import os
 import pprint

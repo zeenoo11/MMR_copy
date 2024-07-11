@@ -244,6 +244,8 @@ pip install -r requirements.txt
 Train the model and evaluate it for each category or different domains. This will output the results (sample-level AUROC, pixel-level AUROC and PRO) for each category. It will generate the visualization in the directory.
 
 run the following code:
+pip install pillow
+
 
 ```
 sh mvtec_run.sh
