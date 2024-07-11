@@ -17,8 +17,14 @@ class MMR_pipeline_:
                  cur_model,
                  mmr_model,
                  optimizer,
-                 device,
-                 cfg):
+                 device=None,
+                 cfg=None):
+        # Set Device
+        if device is None:
+            device = torch.device("cpu")
+        else:
+            device = torch.device(device)
+            
         # register forward hook
         self.teacher_outputs_dict = {}
         for extract_layer in cfg.TRAIN.MMR.layers_to_extract_from:
